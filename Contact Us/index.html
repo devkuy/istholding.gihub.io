@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+<!-- aos -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<body>
+    <div class="container">
+        <span class="big-circle"></span>
+        <img src="img/shape.png" class="square" alt="" />
+        <div class="form">
+            <div class="contact-info">
+                <h3 class="title" data-aos="zoom-in" data-aos-delay="220">Let's get in touch</h3>
+                <p class="text" data-aos="zoom-in" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolorum adipisci recusandae praesentium dicta!</p>
+
+                <div class="info">
+                    <div class="information" data-aos="zoom-in-up" data-aos-delay="300">
+                        <img src="img/location.png" class="icon" alt="" />
+                        <p>Banana Residence, Babakan Madang Sentul, Kab. Bogor Jawa Barat</p>
+                    </div>
+                    <div class="information" data-aos="zoom-in-up" data-aos-delay="350">
+                        <img src="img/email.png" class="icon" alt="" />
+                        <p>admin@eastgroup.id</p>
+                    </div>
+                    <div class="information" data-aos="zoom-in-up" data-aos-delay="400">
+                        <img src="img/phone.png" class="icon" alt="" />
+                        <p>123-456-789</p>
+                    </div>
+                </div>
+
+                <div class="social-media">
+                    <p>Connect with us :</p>
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+
+                <form action="index.html" autocomplete="off">
+                    <h3 class="title">Contact us</h3>
+                    <div class="input-container">
+                        <input type="text" name="name" class="input" id="name" />
+                        <label for="">Username</label>
+                        <span>Username</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" class="input" id="email" />
+                        <label for="">Email</label>
+                        <span>Email</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="phone" name="phone" class="input" id="phone" />
+                        <label for="">Phone</label>
+                        <span>Phone</span>
+                    </div>
+                    <div class="input-container textarea">
+                        <textarea name="message" class="input" id="message"></textarea>
+                        <label for="">Message</label>
+                        <span>Message</span>
+                    </div>
+                    <input type="submit" value="submit" class="btn" id="submit" onclick="gotowhatsapp()" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+        });
+    </script>
+    <script>
+        function gotowhatsapp() {
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            var url = "https://wa.me/6282321096915?text=" + "Name: " + name + "%0a" + "Phone: " + phone + "%0a" + "Email: " + email + "%0a" + "Message: " + message;
+
+            window.open(url, "_blank").focus();
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
